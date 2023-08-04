@@ -1,0 +1,36 @@
+Git/Github Interview Questions
+Git:
+1. What is Git, and how does it differ from other version control systems?
+2. Explain the difference between Git and GitHub.
+3. What is a commit in Git? How do you create a commit?
+4. How do you create and switch between branches in Git?
+5. What is the purpose of the "git clone" command?
+6. How would you resolve a merge conflict in Git?
+7. What is a "rebase" operation in Git, and when might you use it?
+8. What are tags in Git, and how are they different from branches?
+9. Explain the concept of a remote repository in Git.
+10. How do you undo the last commit in Git without losing the changes?
+GitHub:
+11. What is GitHub, and how does it enhance the Git workflow?
+12. What are pull requests in GitHub, and why are they important for collaboration?
+13. How do you fork a repository on GitHub?
+14. Explain the purpose of GitHub Actions in a DevOps context.
+15. What is GitHub Pages, and how can it be used in software development?
+16. How can you ensure code quality using GitHub's code review features?
+17. What is a GitHub repository's README.md file, and why is it important?
+18. How do you create and apply labels to issues in GitHub?
+19. How does GitHub handle security vulnerabilities in open-source projects?
+20. What are GitHub templates, and how can they streamline your development process?
+
+ DevOps and Git/GitHub:
+21. How does Git/GitHub contribute to a DevOps culture and practices?
+22. Describe a scenario where version control using Git/GitHub played a critical role in a
+DevOps workflow.
+23. How do you ensure proper collaboration and communication between development and
+operations teams using Git/GitHub?
+24. Explain how continuous integration (CI) and continuous delivery (CD) can be achieved
+using Git and GitHub.
+25. What strategies would you use to manage configuration files and infrastructure code
+within a Git/GitHub repository?
+26. How do you manage sensitive information (such as API keys) in a Git repository while
+maintaining security best practices?
