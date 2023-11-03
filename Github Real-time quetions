@@ -1,0 +1,86 @@
+1.Can you explain the differences between a merge and a rebase in Git? short answer for interview
+
+In Git:
+A merge creates a new commit to capture changes from a source branch, resulting in a branching history.
+A rebase re-applies source branch commits onto the target branch, creating a linear history.
+Merges preserve context, while rebases provide a cleaner history.
+
+In summary, while both merging and rebasing integrate changes from one branch into another, they differ in how they impact the commit history,
+conflict resolution, and the overall appearance of the repository's timeline. The choice between merge and rebase depends on your specific use
+case and your preference for a clean, linear history or a history that retains branching context.
+
+
+2.What Git command would you use to create a new branch based on your current branch?
+git checkout -b new-branch-name
+
+3.Describe a scenario in which you would use Git's "cherry-pick" command.
+You would use the "cherry-pick" command in Git when you need to apply a specific commit from one branch to another without merging the entire branch.
+This is useful in scenarios like fixing critical bugs or incorporating specific changes while maintaining a clean commit history.
+
+4.What is a Git stash, and how is it useful in your workflow?
+
+A Git stash is a temporary storage for changes in your working directory and staging area. It's useful when you need to switch tasks or branches without
+committing your current changes, providing a way to save and reapply them later.
+
+5.How can you remove a remote branch in Git?
+To remove a remote branch in Git, you can use the git push command with a specific syntax. Here's how you can do it:
+git push origin --delete branch-name
+Replace branch-name with the name of the remote branch you want to delete. After running this command, the remote branch will be removed from the remote repository.
+It's essential to have the necessary permissions to delete a remote branch. Be cautious when deleting remote branches, especially
+if others are working on the same repository, as this action cannot be undone.
+
+6.When should you use the "git rebase -i" interactive rebase command?
+ou should use the "git rebase -i" interactive rebase command when you want to perform interactive and selective changes to your commit history.
+Common scenarios for using interactive rebasing
+
+
+7.How do you update your local Git repository to reflect the changes from a remote repository?
+To update your local Git repository to reflect the changes from a remote repository, you can use the following commands:
+
+First, ensure you are in the local branch that you want to update:
+git checkout your-local-branch
+Fetch the latest changes from the remote repository:
+Replace "origin" with the name of the remote you want to fetch from, typically "origin" for the default remote.
+Merge the fetched changes into your local branch:
+git merge origin/your-remote-branch
+Replace "your-remote-branch" with the name of the branch from the remote repository that you want to merge into your local branch.
+
+Alternatively, you can use a single command to both fetch and merge the changes in one step:
+git pull origin your-remote-branch
+This updates your local branch with the latest changes from the remote repository, ensuring your local repository reflects the current state of the remote.
+
+
+
+
+
+8.Can you explain the difference between "git pull" and "git fetch"?
+"git pull" is a one-stop command that both fetches and merges remote changes into your current branch, while "git fetch" only retrieves the changes from the remote, 
+
+9.What is the difference between "git clone" and "git fork" in the context of GitHub?
+"Git clone" is used to create a local copy of a remote repository on your own machine for personal use or contribution.
+"Git fork" is used to create a personal copy of a repository on GitHub, allowing you to freely make changes without affecting the original repository.
+It's typically used for contributing to open-source projects or collaborating with others.
+Describe a situation where rebasing is preferred over merging in Git.
+
+10.How can you recover or restore a deleted branch in Git?
+To recover or restore a deleted branch in Git, you can follow these steps:
+
+First, identify the commit where the deleted branch was before it was deleted. You can do this by checking the reflog.
+
+bash
+Copy code
+git reflog
+The reflog will show you a list of recent actions, including the commit where your branch was before deletion.
+
+Once you've identified the commit, you can recreate the branch at that specific commit using the following command:
+
+bash
+Copy code
+git checkout -b branch-name commit-hash
+Replace branch-name with the name of the branch you want to restore, and commit-hash with the commit hash from the reflog.
+
+Your deleted branch is now restored, and you can continue working on it.
+
+Be cautious when using the reflog, as it only stores recent actions. If too much time has passed since the branch was deleted,
+  you might not be able to recover it using this method.
+What is the "git bisect" command, and how is it used for debugging?
